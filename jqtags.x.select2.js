@@ -2,33 +2,8 @@ _tag_("jqtags.x.select2",function(select){
 	
 	var jq = module("jQuery");
 	
-	//$.fn.editable.defaults.mode = 'inline';
-	$.fn.editable.defaults.validate = function(v){
-		//console.log("validating",v);
-		//return "Fuck you"
-	};
-
-
-  var getCustomData = function(callback,queryCallback){
-    jQuery.fn.select2.amd.require(
-      ['select2/data/array', 'select2/utils'],
-      function (ArrayData, Utils) {
-        function CustomData($element, options) {
-          CustomData.__super__.constructor.call(this, $element, options);
-        }
-
-        Utils.Extend(CustomData, ArrayData);
-
-        CustomData.prototype.query = queryCallback;
-
-        callback(CustomData);
-      });
-  };
-
-
-
 	return {
-	    tagName: "jqx-selec2",
+	    tagName: "jqx-select2",
 	    events: {
 	    },
 	    accessors: {
